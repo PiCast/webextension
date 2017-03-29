@@ -1,0 +1,109 @@
+body {
+  font-family: "Open Sans", Frutiger, Calibri, "Myriad Pro", Myriad, sans-serif;
+  background-color: #fff;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+
+#mainPopup {
+  min-height: 260px;
+  overflow-y: auto;
+  width: 130px;
+  font-family: Helvetica, Ubuntu, Arial, sans-serif; }
+  #mainPopup #whole {
+    margin: auto;
+    text-align: center; }
+  #mainPopup #popalert {
+    width: 200px;
+    height: 70px;
+    margin: auto;
+    padding: 10px; }
+  #mainPopup #popup {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+    background-color: red; }
+  #mainPopup .fifty {
+    width: 45px;
+    margin: 10px 5px; }
+  #mainPopup .ninety {
+    width: 105px;
+    margin: 10px; }
+  #mainPopup .form-control {
+    max-width: 105px; }
+
+.ng-invalid {
+  border-color: #a94442; }
+
+.alerts li {
+  list-style-type: none; }
+
+input[type="password"], input[type="text"] {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 3px;
+  padding: 7px 10px;
+  font-size: 13px;
+  cursor: auto; }
+
+.setup {
+  background-color: #fff;
+  color: #fff;
+  min-height: 350px; }
+  .setup h2 {
+    font-size: 18px; }
+  .setup label {
+    display: block; }
+  .setup input[type="text"], .setup input[type="password"] {
+    width: 100%; }
+  .setup input[type="text"], .setup input[type="password"], .setup select {
+    display: block; }
+  .setup .btn {
+    position: fixed;
+    bottom: 15px; }
+    .setup .btn.stepNext {
+      right: 15px; }
+
+.angular-steps {
+  position: relative; }
+  .angular-steps .step {
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 100%;
+    width: 100%;
+    padding: 10px; }
+  .angular-steps .step.ng-hide {
+    display: block !important;
+    z-index: 0; }
+
+/*
+ * Animations (optional) - requires ngAnimate
+ */
+.angular-steps .step.ng-hide-add,
+.angular-steps .step.ng-hide-remove {
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  opacity: 1; }
+.angular-steps .step.ng-hide {
+  opacity: 0; }
+
+.nopadding {
+  padding: 0; }
+
+.ng-hide {
+  display: none; }
+
+.version {
+  font-size: 12px;
+  margin-right: 10px; }

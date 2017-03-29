@@ -1,0 +1,150 @@
+@import "bourbon/bourbon";
+
+$background-color: #fff;
+$font-color: #000;
+body {
+  font-family: "Open Sans", Frutiger, Calibri, "Myriad Pro", Myriad, sans-serif;
+  background-color: $background-color;
+  color: $font-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#mainPopup {
+  min-height: 260px;
+  overflow-y: auto;
+  width: 130px;
+  font-family: Helvetica, Ubuntu, Arial, sans-serif;
+
+  #whole {
+    margin: auto;
+    text-align: center;
+  }
+
+  #popalert {
+    width: 200px;
+    height: 70px;
+    margin: auto;
+    padding: 10px;
+  }
+
+  #popup {
+    position: fixed;
+    top: 30px;
+    right: 5px;
+    background-color: red;
+  }
+
+  .fifty {
+    width: 45px;
+    margin: 10px 5px;
+
+  }
+
+  .ninety {
+    width: 105px;
+    margin: 10px;
+  }
+
+  .form-control {
+    max-width: 105px;
+  }
+}
+
+.ng-invalid {
+  border-color: #a94442;
+}
+
+.alerts {
+  li {
+    list-style-type: none;
+  }
+}
+
+input[type="password"], input[type="text"] {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 3px;
+  padding: 7px 10px;
+  font-size: 13px;
+  cursor: auto;
+
+}
+
+.setup {
+  background-color: $background-color;
+  color: #fff;
+  min-height: 350px;
+  h2 {
+    font-size: 18px;
+  }
+  label {
+    display: block;
+  }
+  input[type="text"], input[type="password"] {
+    width: 100%;
+  }
+  input[type="text"], input[type="password"], select {
+    display: block;
+  }
+  .btn {
+    position: fixed;
+    bottom: 15px;
+    &.stepNext {
+      right: 15px;
+    }
+  }
+}
+
+.angular-steps {
+  position: relative;
+  .step {
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .step.ng-hide {
+    display: block !important;
+    z-index: 0;
+  }
+}
+
+/*
+ * Animations (optional) - requires ngAnimate
+ */
+.angular-steps {
+  .step.ng-hide-add,
+  .step.ng-hide-remove {
+    @include transition(all 0.6s ease-in-out);
+    opacity: 1;
+  }
+
+  .step.ng-hide {
+    opacity: 0;
+  }
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.ng-hide {
+  display: none;
+}
+
+.version {
+  font-size: 12px;
+  margin-right: 10px;
+}

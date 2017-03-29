@@ -1,0 +1,31 @@
+<div class="alerts alert alert-warning" ng-if="errors.length > 0">
+    <li ng-repeat="error in errors">{{error}}</li>
+</div>
+<steps on-finish="finished()" class="setup">
+    <step class="step1" name="welcome">
+        <h2>Welcome to the PiCast extension</h2>
+        This wizard will guide you trough the steps to set up the extension.
+        <button class="btn btn-default stepNext" ng-click="next()">Let's begin!</button>
+    </step>
+    <step class="step2" name="server">
+        <h2>PiCast server settings</h2>
+        <label>Server IP</label>
+        <input type="text" ng-model="settings.server_ip"/>
+        <button step-previous class="btn btn-default">Prev</button>
+
+        <button class="btn btn-default stepNext" ng-click="next()" ng-disabled="saving"><i ng-show="saving" ng-class="{'fa-spinner fa-spin': saving}" class="fa"></i> Next</button>
+    </step>
+    <step class="step3" name="vault">
+        <h2>Step 3</h2>
+
+
+        <button step-previous class="btn btn-default">Prev</button>
+        <button class="btn btn-default stepNext" ng-click="next()" ng-disabled="saving"><i ng-show="saving" ng-class="{'fa-spinner fa-spin': saving}" class="fa"></i> Next</button>
+    </step>
+   <step class="step5" name="last">
+        <h1>Done!</h1>
+        <div>If you like, don't forget to donate</div>
+
+        <button step-finish class="btn btn-default" ng-disabled="saving"><i ng-show="saving" ng-class="{'fa-spinner fa-spin': saving}" class="fa"></i> Finish</button>
+    </step>
+</steps>
